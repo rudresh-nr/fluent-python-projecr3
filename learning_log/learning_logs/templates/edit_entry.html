@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <p><a href="{% url 'topic' topic.id %}">Back to Topic</a></p>
+
+    <p>Edit the entry:</p>
+
+    <form action="{% url 'edit_entry' entry.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Edit Entry</button>
+    </form>
+
+{% endblock content %}

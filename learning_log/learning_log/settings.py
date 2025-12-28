@@ -40,7 +40,12 @@ INSTALLED_APPS = [
 
     # My apps
     'learning_logs',
+    'users',
 ]
+
+# My settings
+LOGIN_URL = '/users/login/'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
